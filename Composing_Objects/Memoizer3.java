@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 public class Memoizer3<A,V> implements Computable<A,V> {
 
     private final Map<A, Future<V>> cache =
-            new ConcurrentHashMap<A,Future<V>>();
+            new ConcurrentHashMap<>();
     private final Computable<A,V> c;
 
     public Memoizer3(Computable<A,V> c) {

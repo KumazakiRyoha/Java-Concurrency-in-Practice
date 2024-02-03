@@ -1,6 +1,7 @@
 import java.math.BigInteger;
+import java.util.concurrent.ExecutionException;
 
 public interface Computable<A,V> {
-    V compute(A arg) throws InterruptedException;
+    V compute(A arg) throws InterruptedException, ExecutionException;
 }
 
