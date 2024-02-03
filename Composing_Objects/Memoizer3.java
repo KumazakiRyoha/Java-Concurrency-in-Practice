@@ -16,7 +16,7 @@ public class Memoizer3<A,V> implements Computable<A,V> {
         Future<V> f = cache.get(arg);
         if (f == null) {
             Callable<V> eval = new Callable<V>() {
-                public V call() throws InterruptedException {
+                public V call() throws InterruptedException, ExecutionException {
                     return c.compute(arg);
                 }
             };
